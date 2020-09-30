@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import TrendingRow from './TrendingRow';
 import Row from './Row';
+import Banner from './Banner';
+import Nav from './Nav';
 
 
 function App() {
@@ -16,9 +18,10 @@ function App() {
   const fetchDocumentaries = `https://api.themoviedb.org/3/discover/movie?api_key=1a7839295bf8205f4aa7902beeacc6a4&with_genres=99`;
 
   return (
-    <div className="App">
-      <h1>Netflix</h1>
-      <Row title="NETFLIX ORIGINALS" fetchUrl={fetchNetflixOriginals} />
+    <div className="app">
+      <Nav />
+      <Banner fetchUrl={fetchNetflixOriginals} />
+      <Row title="NETFLIX ORIGINALS" fetchUrl={fetchNetflixOriginals} isLargeRow />
       <Row title="Trending Now" fetchUrl={fetchTrending} />
       <Row title="Top Rated" fetchUrl={fetchTopRated} />
       <Row title="Action Movies" fetchUrl={fetchActionMovies} />
