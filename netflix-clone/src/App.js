@@ -19,10 +19,14 @@ function App() {
     <div className="App">
       <h1>Netflix</h1>
       <Row title="NETFLIX ORIGINALS" fetchUrl={fetchNetflixOriginals} />
-      <TrendingRow title="Trending Now" />
-      {/* <Row title="NETFLIX ORIGINALS" />
-      <Row title="NETFLIX ORIGINALS" />
-      <Row title="NETFLIX ORIGINALS" /> */}
+      <Row title="Trending Now" fetchUrl={fetchTrending} />
+      <Row title="Top Rated" fetchUrl={fetchTopRated} />
+      <Row title="Action Movies" fetchUrl={fetchActionMovies} />
+      <Row title="Comedy Movies" fetchUrl={fetchComedyMovies} />
+      <Row title="Horror Movies" fetchUrl={fetchHorrorMovies} />
+      <Row title="Romance Movies" fetchUrl={fetchRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={fetchDocumentaries} />
+
     </div>
   );
 }
